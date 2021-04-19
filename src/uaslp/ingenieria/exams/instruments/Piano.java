@@ -2,9 +2,15 @@ package uaslp.ingenieria.exams.instruments;
 
 import uaslp.ingenieria.exams.Nota;
 
-public class Piano {
+public class Piano implements Instrumento{
+	@Override
+	public void tocaNota(Nota nota) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    public void presionaTecla(Nota nota){
-
-    }
+	public Object presionaTecla(Nota nota) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

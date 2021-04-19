@@ -5,8 +5,7 @@ import uaslp.ingenieria.exams.instruments.*;
 import java.util.Iterator;
 
 public class SongPlayer {
-
-    public void play(Song song, Instrumento instrumento) {
+    public void play(Song song, Tipo tipo) {
 
         Iterator<Nota> notas = song.getSongIterator();
         Piano piano = new Piano();
@@ -17,11 +16,11 @@ public class SongPlayer {
         while (notas.hasNext()) {
             Nota nota = notas.next();
 
-            switch (instrumento) {
-                case PIANO -> piano.presionaTecla(nota);
-                case FLAUTA -> flauta.sopla(nota);
-                case VIOLIN -> violin.toca(nota);
-                case GUITARRA -> guitarra.tocaCuerda(nota);
+            switch (tipo) {
+                case PIANO -> piano.tocaNota(nota);
+                case FLAUTA -> flauta.tocaNota(nota);
+                case VIOLIN -> violin.tocaNota(nota);
+                case GUITARRA -> guitarra.tocaNota(nota);
                 default -> System.out.println("Instrumento no soportado");
             }
         }

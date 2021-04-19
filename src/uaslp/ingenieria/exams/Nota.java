@@ -1,6 +1,6 @@
 package uaslp.ingenieria.exams;
 
-public final class Nota {
+public class Nota {
     private int nota;
     private int tempo;
 
